@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Explorer</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f9fa;
+        }
+        
+        header {
+            background-color: #2c8a6b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #2c8a6b;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .content-text {
+            flex: 1;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .image-container {
+            flex: 1;
+        }
+        
+        .nature-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .nature-image:hover {
+            transform: scale(1.02);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #2c8a6b;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #1f6b52;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+        }
+        
+        .resources {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .resources ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .resources li {
+            margin-bottom: 10px;
+        }
+        
+        .resources a {
+            color: #2c8a6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .resources a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nature Explorer</h1>
+        <p>Discover the beauty of our natural world</p>
+    </header>
+    
+    <div class="main-content">
+        <div class="content-text">
+            <h2>Welcome to Nature Explorer</h2>
+            <p>Our planet is home to breathtaking landscapes, diverse wildlife, and incredible natural wonders. From the depths of the oceans to the highest mountain peaks, nature never ceases to amaze us with its beauty and complexity.</p>
+            <p>This website is dedicated to exploring and appreciating the natural world around us. Whether you're an avid hiker, a wildlife enthusiast, or simply someone who enjoys beautiful scenery, there's something here for everyone.</p>
+            
+            <button class="cta-button" id="learnMoreBtn">Learn More</button>
+        </div>
+        
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Beautiful mountain landscape" class="nature-image">
+        </div>
+    </div>
+    
+    <div class="resources">
+        <h2>Nature Resources</h2>
+        <p>Explore these resources to learn more about our natural world:</p>
+        <ul>
+            <li><a href="https://www.nationalgeographic.com" target="_blank">National Geographic</a> - Stunning photography and in-depth articles</li>
+            <li><a href="https://www.nps.gov" target="_blank">National Park Service</a> - Information about U.S. national parks</li>
+            <li><a href="https://www.worldwildlife.org" target="_blank">World Wildlife Fund</a> - Conservation efforts worldwide</li>
+            <li><a href="https://www.audubon.org" target="_blank">National Audubon Society</a> - Bird conservation and watching</li>
+        </ul>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Nature Explorer. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@natureexplorer.com">info@natureexplorer.com</a></p>
+    </footer>
+    
+    <script>
+        // JavaScript for interactivity
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            alert('Thanks for your interest in nature! We\'ll be adding more content soon. In the meantime, check out the resources below.');
+        });
+        
+        // Bonus: Change header color when scrolling
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = '#1f6b52';
+            } else {
+                header.style.backgroundColor = '#2c8a6b';
+            }
+        });
+    </script>
+</body>
+</html>
